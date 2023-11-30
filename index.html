@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card">
+    <div class="cardText">
+      <h1>Cool Header</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aperiam quasi doloremque fugit nam, earum,
+        id ipsum similique iusto quisquam sint, temporibus non tempore sequi!</p>
+    </div>
+  </div>
+  <script>
+    const card = document.querySelector(".card")
+    card.addEventListener("mousemove", (e) => {
+      const x = e.pageX - card.offsetLeft
+      const y = e.pageY - card.offsetTop
+
+      card.style.setProperty("--left", x + "px")
+      card.style.setProperty("--top", y + "px")
+    })
+  </script>
+</body>
+
+</html>
